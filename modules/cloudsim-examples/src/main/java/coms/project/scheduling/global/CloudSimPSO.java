@@ -1,4 +1,4 @@
-package coms.project.scheduling;
+package coms.project.scheduling.global;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
