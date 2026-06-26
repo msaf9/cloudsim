@@ -1,4 +1,4 @@
-package coms.project.enhanced;
+package coms.project.secure;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -28,9 +28,9 @@ import org.cloudbus.cloudsim.provisioners.RamProvisionerSimple;
 
 import coms.project.attack.AttackSimulator;
 import coms.project.attack.CryptoUtils;
-import coms.project.measures.AccessControl;
-import coms.project.measures.PrivacyMonitor;
-import coms.project.measures.SecurityMonitor;
+import coms.project.monitor.AccessControl;
+import coms.project.monitor.PrivacyMonitor;
+import coms.project.monitor.SecurityMonitor;
 
 /**
  * Enhanced CloudSim Round-Robin simulation with security and privacy measures.
@@ -40,7 +40,7 @@ import coms.project.measures.SecurityMonitor;
  * and performs security and privacy monitoring on the results.
  * 
  */
-public class CloudSimRREnhanced {
+public class CloudSimRRSecure {
     /**
      * The broker managing VM and cloudlet submissions.
      */

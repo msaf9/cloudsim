@@ -1,4 +1,4 @@
-package coms.project.enhanced;
+package coms.project.secure;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -29,15 +29,15 @@ import org.cloudbus.cloudsim.provisioners.RamProvisionerSimple;
 
 import coms.project.attack.AttackSimulator;
 import coms.project.attack.CryptoUtils;
-import coms.project.measures.AccessControl;
-import coms.project.measures.PrivacyMonitor;
-import coms.project.measures.SecurityMonitor;
+import coms.project.monitor.AccessControl;
+import coms.project.monitor.PrivacyMonitor;
+import coms.project.monitor.SecurityMonitor;
 
 /**
  * Entry point for the enhanced CloudSim simulation incorporating genetic
  * algorithm based scheduling alongside security and privacy measures.
  */
-public class CloudSimGAEnhanced {
+public class CloudSimGASecure {
     
     /** The broker responsible for submitting VMs and Cloudlets to datacenters. */
     public static DatacenterBroker broker;

@@ -1,4 +1,4 @@
-package coms.project.enhanced;
+package coms.project.secure;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -29,16 +29,16 @@ import org.cloudbus.cloudsim.provisioners.RamProvisionerSimple;
 
 import coms.project.attack.AttackSimulator;
 import coms.project.attack.CryptoUtils;
-import coms.project.measures.AccessControl;
-import coms.project.measures.PrivacyMonitor;
-import coms.project.measures.SecurityMonitor;
+import coms.project.monitor.AccessControl;
+import coms.project.monitor.PrivacyMonitor;
+import coms.project.monitor.SecurityMonitor;
 
 /**
  * Main class for running an enhanced CloudSim simulation integrating security
  * and privacy measures along with a Whale Optimization Algorithm (WOA) for
  * cloudlet-to-VM scheduling.
  */
-public class CloudSimWOAEnhanced {
+public class CloudSimWOASecure {
     /** The broker responsible for submitting VMs and cloudlets. */
     public static DatacenterBroker broker;
 

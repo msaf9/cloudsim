@@ -1,4 +1,4 @@
-package coms.project.enhanced;
+package coms.project.secure;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -27,11 +27,12 @@ import org.cloudbus.cloudsim.provisioners.BwProvisionerSimple;
 import org.cloudbus.cloudsim.provisioners.PeProvisionerSimple;
 import org.cloudbus.cloudsim.provisioners.RamProvisionerSimple;
 
-import coms.project.attack.AttackSimulator;
 import coms.project.attack.CryptoUtils;
-import coms.project.measures.AccessControl;
-import coms.project.measures.PrivacyMonitor;
-import coms.project.measures.SecurityMonitor;
+import coms.project.attack.privacy.PrivacyAttackSimulator;
+import coms.project.attack.security.SecurityAttackSimulator;
+import coms.project.monitor.AccessControl;
+import coms.project.monitor.PrivacyMonitor;
+import coms.project.monitor.SecurityMonitor;
 
 /**
  * CloudSimACOEnhanced is an enhanced CloudSim simulation example integrating
@@ -42,7 +43,7 @@ import coms.project.measures.SecurityMonitor;
  * and performs monitoring and privacy analysis on the simulation results.
  * 
  */
-public class CloudSimACOEnhanced {
+public class CloudSimACOSecure {
 
     /**
      * The broker used to submit VMs and cloudlets.
@@ -100,13 +101,22 @@ public class CloudSimACOEnhanced {
             cloudletList = createCloudlet(brokerId, 40);
 
             // Encrypt VM metadata
-            AttackSimulator.encryptVMLocalMetadata(vmlist);
+//            AttackSimulator.encryptVMLocalMetadata(vmlist);
 
             // Simulate attacks
-            AttackSimulator.simulateDoS(broker, 30);
-            AttackSimulator.simulatePoisoning(cloudletList);
-            AttackSimulator.simulateDataLeakageEncrypted(vmlist);
-            AttackSimulator.simulateTimingAnalysis(broker);
+//            AttackSimulator.simulateDoS(broker, 30);
+//            AttackSimulator.simulatePoisoning(cloudletList);
+//            AttackSimulator.simulateDataLeakageEncrypted(vmlist);
+//            AttackSimulator.simulateTimingAnalysis(broker);
+            
+            // Privacy Simulator calls
+            PrivacyAttackSimulator.encryptVMLocalMetadata(vmlist);
+            PrivacyAttackSimulator.simulateDataLeakageEncrypted(vmlist);
+            PrivacyAttackSimulator.simulateTimingAnalysis(broker);
+
+            // Security Simulator calls
+            SecurityAttackSimulator.simulateDoS(broker, 30);
+            SecurityAttackSimulator.simulatePoisoning(cloudletList);
 
             // Enforce quotas
             if (cloudletList.size() > MAX_CLOUDLETS) {
@@ -223,7 +233,8 @@ public class CloudSimACOEnhanced {
             SecurityMonitor.checkPrivacyLeaksEncrypted(results);
 
             // Inference attack
-            AttackSimulator.simulateInferenceAttack(results);
+//            AttackSimulator.simulateInferenceAttack(results);
+            PrivacyAttackSimulator.simulateInferenceAttack(results);
 
             // Privacy analysis
             PrivacyMonitor.checkIOLarge(results);

@@ -1,4 +1,4 @@
-package coms.project.enhanced;
+package coms.project.secure;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -28,16 +28,16 @@ import org.cloudbus.cloudsim.provisioners.RamProvisionerSimple;
 
 import coms.project.attack.AttackSimulator;
 import coms.project.attack.CryptoUtils;
-import coms.project.measures.AccessControl;
-import coms.project.measures.PrivacyMonitor;
-import coms.project.measures.SecurityMonitor;
+import coms.project.monitor.AccessControl;
+import coms.project.monitor.PrivacyMonitor;
+import coms.project.monitor.SecurityMonitor;
 
 /**
  * CloudSimPSOEnhanced simulates a secure and privacy-aware cloud computing environment
  * using CloudSim and Particle Swarm Optimization (PSO) for task scheduling.
  * It includes mechanisms for access control, simulated attacks, and anomaly monitoring.
  */
-public class CloudSimPSOEnhanced {
+public class CloudSimPSOSecure {
 
     /** Broker responsible for submitting and managing cloudlets and VMs */
     public static DatacenterBroker broker;

@@ -1,4 +1,4 @@
-package coms.project.enhanced;
+package coms.project.secure;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -32,15 +32,15 @@ import org.cloudbus.cloudsim.provisioners.RamProvisionerSimple;
 
 import coms.project.attack.AttackSimulator;
 import coms.project.attack.CryptoUtils;
-import coms.project.measures.AccessControl;
-import coms.project.measures.PrivacyMonitor;
-import coms.project.measures.SecurityMonitor;
+import coms.project.monitor.AccessControl;
+import coms.project.monitor.PrivacyMonitor;
+import coms.project.monitor.SecurityMonitor;
 
 /**
  * Main class for the enhanced CloudSim simulation using Max-Min scheduling.
  * Integrates security, privacy, and attack simulations with resource management.
  */
-public class CloudSimMaxMinEnhanced {
+public class CloudSimMaxMinSecure {
     /** Broker for managing VM and cloudlet submissions. */
     public static DatacenterBroker broker;
 

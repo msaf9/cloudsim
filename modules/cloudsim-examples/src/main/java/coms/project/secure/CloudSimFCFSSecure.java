@@ -1,4 +1,4 @@
-package coms.project.enhanced;
+package coms.project.secure;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -26,9 +26,9 @@ import org.cloudbus.cloudsim.provisioners.RamProvisionerSimple;
 
 import coms.project.attack.AttackSimulator;
 import coms.project.attack.CryptoUtils;
-import coms.project.measures.AccessControl;
-import coms.project.measures.PrivacyMonitor;
-import coms.project.measures.SecurityMonitor;
+import coms.project.monitor.AccessControl;
+import coms.project.monitor.PrivacyMonitor;
+import coms.project.monitor.SecurityMonitor;
 
 /**
  * Enhanced CloudSim FCFS simulator.
@@ -42,7 +42,7 @@ import coms.project.measures.SecurityMonitor;
  * - Privacy analysis tools (I/O detection, differential privacy, inference attacks)</li>
  *
  */
-public class CloudSimFCFSEnhanced {
+public class CloudSimFCFSSecure {
 
     /** Broker for cloudlet and VM submissions. */
     public static DatacenterBroker broker;
